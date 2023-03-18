@@ -10,19 +10,36 @@
 </head>
 
 <body>
-  <main>
-    <div class="TestingTODO">
-      <input type="text" id="input" placeholder="To do..." />
-      <button type="button" id="buttonTest">Add</button>
-      <ul id="list">
-        <li>Read a book</li>
-        <li>Lunch with Caro</li>
-        <li>Feed the dog</li>
-      </ul>
-    </div>
 
-    <script src="main.js"></script>
-  </main>
+
+  <div id="top">
+    <h1>Enter Item To-Do</h1>
+    <div class="add-container">
+      <div id="form-new-task">
+        <input type="text" id="item" placeholder="To do ..." />
+
+        <button type="submit" id="add">Add</button>
+      </div>
+
+      <!--This will add-->
+
+      <h1>ToDo List</h1>
+      <div class="list"></div>
+      <ul class="todo" id="todo"></ul>
+    </div>
+  </div>
+  <!--END OF TOP-->
+
+  <div id="bottom">
+    <header>
+      <h1>Done</h1>
+    </header>
+    <div class="list-completed">
+      <ul class="completed" id="completed"></ul>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
 </body>
 
 </html>
