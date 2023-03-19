@@ -2,11 +2,18 @@ const form = document.querySelector("form");
 const input = document.querySelector("#item");
 const list = document.querySelector("#list");
 
+
+
+
+
+
 form.addEventListener("submit", (e) => {
   //stop refreshing the page from the form submitting
   e.preventDefault();
   //get the input value
   const task = input.value;
+
+  if (task){
   
 
   const todoList = document.createElement("div");
@@ -39,13 +46,6 @@ form.addEventListener("submit", (e) => {
   editBtn.addEventListener('click',editItem)
   taskContentElement.appendChild(editBtn);
 
-    //complete button
-   const completeBtn = document.createElement("button");
-  completeBtn.innerText = "Complete";
-  completeBtn.className = "complete";
-  completeBtn.addEventListener("click", completeItem3);
-  taskContentElement.appendChild(completeBtn);
-
   //delete button
   const deleteBtn = document.createElement("button");
   deleteBtn.innerText = "Delete";
@@ -56,59 +56,29 @@ form.addEventListener("submit", (e) => {
   input.value = "";
 
   list.appendChild(todoList);
+  }
 });
+
+
 
 
 //complete event
 function completeItem(event) {
   let item = this.parentNode;
-  
-    let parent = item.parentNode;
-    let id = item.id;
-    console.log(id)
-  
-  if(event.target.checked){
-    console.log('text')
-    
-
-    let target =
-    className === "todo-list"
-      ? document.getElementsByClassName("todo-list")
-      : document.getElementsByClassName("list-completed");
-     
-     parent.removeChild(item);
-    
-   
-  }
-
-}
-
-//complete event2
-function completeItem2() {
-  
-  let item = this.parentNode.parentNode;
-  
   let parent = item.parentNode;
-  let className = parent.className;
-  
-  
-  console.log(parent)
-  console.log(item)
-  
-  console.log(className)
-  // check if the item should go in the completed or if it should be re-added to todo by using  operator
-  let target =
-    className === "todo-list"
-      ? document.getElementsByClassName("todo-list")
-      : document.getElementsByClassName("list-completed");
-  
-  parent.removeChild(item);
+  const completeToDo = document.querySelector('#list-completed')
+  const listTodo = document.querySelector('#list')
+  if(event.target.checked){
 
+    parent.removeChild(item);
+    completeToDo.appendChild(item)
   
-  console.log(target)
+  }else{
+    listTodo.appendChild(item)
 
+  }
+  
 }
-
 
 
 //EDITITEM EVENTLISTENER

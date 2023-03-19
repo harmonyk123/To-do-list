@@ -10,6 +10,8 @@ body{
   background-color: #141010;
 }
 
+
+
 #top{
     background-color: #c3195d;
     font-weight: 400;
@@ -35,16 +37,19 @@ body{
 
 #item{
   flex: 1 1 0%;
-  margin-left: 40px;
+  margin-left: 30px;
   background-color: rgb(244, 247, 248);
   padding:1em;
   border-radius: 1rem;
+  font-size: 1rem;
 }
 
-#add{
+#item-submit{
   font-size: 1rem;
-  padding: 1em;
-  border-radius: 0.5rem;
+  font-weight: bold;
+  padding: 1rem;
+  border-radius: 1rem;
+
 
 }
 
@@ -52,8 +57,7 @@ body{
   margin: 0;
   }
 
-
-  .content input{
+.content input{
     border: none;
     outline: none;
     background: none;
@@ -78,9 +82,7 @@ body{
 
 }
 
-
-
-#list .content{
+#list .content, #list-completed .content{
   width: 100%;
   background-color: bisque;
   padding: 1rem;
@@ -89,28 +91,23 @@ body{
   align-items: center;
   gap: 1rem;
   margin-top: 5px;
-  
-
 }
 
-
-#list .edit{
+#list .edit, #list-completed .edit{
   font-size: 1rem;
   margin-left: auto;
   padding: 0.5rem;
   border-radius: 0.5rem;
 }
 
-.complete, .delete{
+ .delete {
   font-size: 1rem;
   padding: 0.5rem;
   border-radius: 0.5rem;
 }
 
-
 #bottom{
   margin-top:20px;
-  
   background-color: #680747;
   font-weight: 400;
   font-size: 24px;
@@ -121,3 +118,4 @@ body{
   gap: 1rem;
   justify-content: space-between;
 }
+
