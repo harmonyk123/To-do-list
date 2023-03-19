@@ -1,9 +1,9 @@
 * {
   box-sizing: border-box;
-  
+
 }
 
-body{
+body {
   margin: 3em;
   position: relative;
   height: 100vh;
@@ -12,39 +12,39 @@ body{
 
 
 
-#top{
-    background-color: #c3195d;
-    font-weight: 400;
-    font-size: 24px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 2rem;
-    gap: 1rem;
-    justify-content: space-between;
+#top {
+  background-color: #c3195d;
+  font-weight: 400;
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 2rem;
+  gap: 1rem;
+  justify-content: space-between;
 }
 
 
-.header-title{
-    font-size: 25px;
-    font-weight: 400;
-    text-align: center;
+.header-title {
+  font-size: 25px;
+  font-weight: 400;
+  text-align: center;
 }
 
-#form-new-task{
+#form-new-task {
   display: flex;
 }
 
-#item{
+#item {
   flex: 1 1 0%;
   margin-left: 30px;
   background-color: rgb(244, 247, 248);
-  padding:1em;
+  padding: 1em;
   border-radius: 1rem;
   font-size: 1rem;
 }
 
-#item-submit{
+#item-submit {
   font-size: 1rem;
   font-weight: bold;
   padding: 1rem;
@@ -53,28 +53,28 @@ body{
 
 }
 
-.list{
+.list {
   margin: 0;
-  }
-
-.content input{
-    border: none;
-    outline: none;
-    background: none;
 }
 
-.content .text{
+.content input {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.content .text {
   font-size: 1.5rem;
-  
+
 
 }
 
-.content .text:not(:read-only){
-  color:blue;
+.content .text:not(:read-only) {
+  color: blue;
 
 }
 
-.todo-list{
+.todo-list {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -82,7 +82,8 @@ body{
 
 }
 
-#list .content, #list-completed .content{
+#list .content,
+#list-completed .content {
   width: 100%;
   background-color: bisque;
   padding: 1rem;
@@ -93,21 +94,22 @@ body{
   margin-top: 5px;
 }
 
-#list .edit, #list-completed .edit{
+#list .edit,
+#list-completed .edit {
   font-size: 1rem;
   margin-left: auto;
   padding: 0.5rem;
   border-radius: 0.5rem;
 }
 
- .delete {
+.delete {
   font-size: 1rem;
   padding: 0.5rem;
   border-radius: 0.5rem;
 }
 
-#bottom{
-  margin-top:20px;
+#bottom {
+  margin-top: 20px;
   background-color: #680747;
   font-weight: 400;
   font-size: 24px;
@@ -119,3 +121,51 @@ body{
   justify-content: space-between;
 }
 
+
+@media all and (max-width: 420px) {
+
+  html {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 10px;
+    
+  }
+
+  #top {
+    background-color: #c3195d;
+    font-size: 10px;
+  }
+
+  #item {
+    margin:0;
+    font-size: 12px;
+  }
+
+  #item-submit {
+    font-size: 12px
+  }
+
+
+  #list .content,
+  #list-completed .content {
+    background-color: bisque;
+    font-size: 10px;
+    padding: 1rem;
+    border-radius: 1rem;
+    gap: 1rem;
+    margin-top: 5px;
+
+  }
+
+  .content .text {
+    border: none;
+    outline: none;
+    background: none;
+    width: 50%;
+  }
+
+    #bottom {
+      background-color: #680747;
+      font-size: 10px;
+    }
+  }
